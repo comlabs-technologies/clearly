@@ -6,19 +6,23 @@ import { useReducedMotion } from "motion/react";
 /**
  * Steps a demo through its stages once per `runKey`. Each entry in `timings`
  * is the delay in milliseconds before advancing to the next stage. With
- * reduced motion the demo jumps straight to its final resting stage.
+ * reduced motion the demo reports its final resting stage immediately.
  */
 export function useDemoSequence(timings: number[], runKey: number | string) {
   const reduced = useReducedMotion();
   const [stage, setStage] = useState(0);
+  const [seenKey, setSeenKey] = useState(runKey);
+
+  // Reset during render when the demo is re-selected — the sanctioned way to
+  // adjust state from a changed input without an extra render pass.
+  if (seenKey !== runKey) {
+    setSeenKey(runKey);
+    setStage(0);
+  }
 
   useEffect(() => {
-    if (reduced) {
-      setStage(timings.length);
-      return;
-    }
+    if (reduced) return;
 
-    setStage(0);
     const timers: ReturnType<typeof setTimeout>[] = [];
     let elapsed = 0;
 
@@ -28,9 +32,9 @@ export function useDemoSequence(timings: number[], runKey: number | string) {
     });
 
     return () => timers.forEach(clearTimeout);
-    // Re-running is intentional whenever the demo is re-selected.
+    // `timings` is a literal recreated each render; the run is keyed instead.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [runKey, reduced]);
 
-  return stage;
+  return reduced ? timings.length : stage;
 }

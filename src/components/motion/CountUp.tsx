@@ -31,34 +31,32 @@ export function CountUp({
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: "0px 0px -15% 0px" });
   const reduced = useReducedMotion();
-  const [display, setDisplay] = useState(reduced ? value : 0);
+  const [counted, setCounted] = useState(0);
 
   useEffect(() => {
-    if (!inView) return;
-    if (reduced) {
-      setDisplay(value);
-      return;
-    }
+    if (!inView || reduced) return;
 
     let frame = 0;
     const start = performance.now();
 
     const tick = (now: number) => {
-      const elapsed = now - start;
-      const progress = Math.min(elapsed / duration, 1);
+      const progress = Math.min((now - start) / duration, 1);
       // Ease-out without overshoot.
       const eased = 1 - Math.pow(1 - progress, 3);
-      setDisplay(value * eased);
+      setCounted(value * eased);
       if (progress < 1) {
         frame = requestAnimationFrame(tick);
       } else {
-        setDisplay(value);
+        setCounted(value);
       }
     };
 
     frame = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frame);
   }, [inView, value, duration, reduced]);
+
+  // With reduced motion the final figure is shown outright rather than counted.
+  const display = reduced ? value : counted;
 
   return (
     <span ref={ref} className={`tabular ${className ?? ""}`}>
