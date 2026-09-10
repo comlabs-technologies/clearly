@@ -66,14 +66,14 @@ export function InfrastructureSection() {
       <div className="page-rail rail-dark">
         <div className="gutter pt-section-sm md:pt-section">
           <Reveal>
-            <h2 className="max-w-[26ch] text-h2-mobile md:text-h2">
-              Built on open infrastructure for a new financial world.
+            <h2 className="text-h2-mobile md:text-h2">
+              Open infrastructure, all the way down.
             </h2>
           </Reveal>
           <Reveal delay={0.08}>
             <p className="mt-4 max-w-prose text-body text-dark-soft">
-              Every layer of the account is independently verifiable, and none of it is ours
-              alone to switch off.
+              Every layer of the account is independently verifiable, and none of it is
+              ours alone to switch off.
             </p>
           </Reveal>
         </div>

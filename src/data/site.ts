@@ -8,46 +8,46 @@ export type Capability = {
 export const capabilities: Capability[] = [
   {
     id: "swap",
-    title: "Swap anything to anything",
+    title: "Swap across networks",
     description:
-      "Move between hundreds of assets across every supported network in a single step. Your order is routed to competing market makers, and you keep the best quote returned — no bridging, no wrapped detours, no manual chain hopping.",
+      "Exchange between hundreds of assets in a single step, wherever they live. Orders are routed to competing liquidity providers and filled at the best quote returned — no bridging, no wrapped placeholders, no manual hopping between networks.",
   },
   {
     id: "send",
-    title: "Send anything, anywhere",
+    title: "Send money anywhere",
     description:
-      "Pay a username, an address, or a contact you saved. Fees are quoted up front in the currency you hold, and settlement happens in seconds whether the recipient is on the same network or the other side of the world.",
+      "Pay a username, an address, or someone from your contacts. Fees are quoted up front in the currency you already hold, and transfers settle in seconds whether the recipient is nearby or on the other side of the world.",
   },
   {
     id: "rwa",
     title: "Invest in real-world assets",
     description:
-      "Hold tokenised equities, treasury bills and precious metals beside your digital assets. Fractional from a single unit, tradable outside market hours, and reported in one consolidated position view.",
+      "Hold equities, treasury exposure and precious metals beside your digital balances. Positions are fractional from a single unit, tradable outside market hours, and reported in one consolidated view.",
   },
   {
     id: "earn",
-    title: "Earn on your assets",
+    title: "Earn on idle balances",
     description:
-      "Put idle balances to work in vetted yield strategies with transparent rates and no lock-ups. Earnings accrue by the block, and you can withdraw the full position whenever you want it back.",
+      "Put balances to work in vetted strategies with transparent rates and no lock-ups. Earnings accrue continuously, the underlying venue is named on every position, and you can withdraw the whole thing whenever you want it back.",
   },
   {
     id: "perps",
-    title: "Trade perpetual markets",
+    title: "Trade with leverage",
     description:
-      "Open long or short exposure on major markets with adjustable leverage, isolated margin, and liquidation levels shown before you confirm. Positions and funding settle against the same account balance.",
+      "Take long or short exposure on major markets with adjustable leverage, isolated margin, and the liquidation level shown before you confirm. Positions and funding settle against the same account balance.",
   },
   {
     id: "banking",
-    title: "Bank and spend from one account",
+    title: "Spend from your balance",
     description:
-      "Local account details for receiving salary, plus a card that spends directly from your balance. One account for what you hold, what you earn, and what you spend.",
+      "Local account details for receiving income, plus a card that spends straight from what you hold. One account for what you own, what you earn, and what you spend.",
     comingSoon: true,
   },
   {
     id: "ai",
-    title: "Understand your finances with AI",
+    title: "Ask questions about your money",
     description:
-      "Ask plain questions about your portfolio and get answers grounded in your own activity. Analysis runs inside a secure environment, so your positions are never exposed to build the response.",
+      "Ask in plain language and get answers grounded in your own activity. Analysis runs inside a secure environment, so your positions are never exposed in order to produce a response.",
     comingSoon: true,
   },
 ];
@@ -62,21 +62,21 @@ export type PrivacyFeature = {
 export const privacyFeatures: PrivacyFeature[] = [
   {
     id: "payments",
-    title: "One payment shouldn't reveal everything",
+    title: "A payment reveals only itself",
     icon: "shield",
-    body: "Settling an invoice today hands the recipient your entire balance history. Here, a transfer reveals the transfer — and nothing that sits behind it.",
+    body: "Settling an invoice shouldn't hand the recipient your entire history. Here a transfer shows the transfer, and nothing that sits behind it.",
   },
   {
     id: "transfers",
-    title: "More than private transfers",
+    title: "Consistent across every feature",
     icon: "eye-off",
-    body: "Confidentiality covers balances, swaps, positions and yield alike, so activity stays consistent instead of leaking through the one feature that isn't shielded.",
+    body: "Balances, trades, positions and yield are treated alike, so your activity never leaks through the one feature that was left unshielded.",
   },
   {
     id: "control",
-    title: "Choose what you reveal",
+    title: "Disclosure on your terms",
     icon: "sliders",
-    body: "Produce a signed view of a single position or a date range when an auditor, accountant or counterparty needs proof. Disclosure stays deliberate and scoped.",
+    body: "Produce a signed view of one position or a date range when an accountant, auditor or counterparty needs proof. Sharing stays deliberate and scoped.",
   },
 ];
 
@@ -92,25 +92,25 @@ export const infrastructure: InfraCard[] = [
     id: "chain",
     name: "Settlement layer",
     swatch: "chain",
-    body: "A high-throughput chain finalising blocks in around a second, so a confirmation feels like a confirmation rather than a waiting room.",
+    body: "A high-throughput ledger that finalises in about a second, so a confirmation feels like a confirmation rather than a waiting room.",
   },
   {
     id: "intents",
     name: "Intent engine",
     swatch: "intents",
-    body: "You describe the outcome you want. Solvers compete to fill it at the best available price and are paid only when they deliver.",
+    body: "You describe the outcome you want. Solvers compete to fill it at the best available price, and are paid only when they deliver it.",
   },
   {
     id: "confidential",
     name: "Confidential compute",
     swatch: "confidential",
-    body: "Balances and order flow are processed inside attested enclaves. Verification happens without the underlying amounts ever being published.",
+    body: "Balances and order flow are processed inside attested enclaves, so activity can be verified without the amounts ever being published.",
   },
   {
     id: "intelligence",
     name: "Private intelligence",
     swatch: "intelligence",
-    body: "Portfolio analysis runs against encrypted data in an isolated runtime. Your holdings inform the answer without leaving your account.",
+    body: "Portfolio analysis runs against encrypted data in an isolated runtime. Your holdings shape the answer without ever leaving the account.",
   },
 ];
 
@@ -124,9 +124,9 @@ export const partners = [
 ];
 
 export const stats = [
-  { id: "volume", value: 28, prefix: "$", suffix: "B", label: "all-time volume" },
+  { id: "volume", value: 28, prefix: "$", suffix: "B", label: "settled to date" },
   { id: "assets", value: 113, prefix: "", suffix: "", label: "supported assets" },
-  { id: "chains", value: 34, prefix: "", suffix: "", label: "supported networks" },
+  { id: "chains", value: 34, prefix: "", suffix: "", label: "connected networks" },
 ];
 
 export type Faq = { id: string; question: string; answer: string };
@@ -136,43 +136,43 @@ export const faqs: Faq[] = [
     id: "what",
     question: "What is Clearly?",
     answer:
-      "Clearly is a single account for the assets people actually hold: digital currencies, tokenised stocks and bonds, precious metals, and yield-bearing positions. It combines the reach of an onchain wallet with the clarity of a brokerage statement, and it keeps your balances confidential unless you decide to reveal them.",
+      "Clearly is a single account for the things people actually hold: currencies, tokenised equities and bonds, precious metals, and yield-bearing positions. It combines the reach of a self-custodied wallet with the clarity of a brokerage statement, and keeps your balances confidential unless you choose to reveal them.",
   },
   {
     id: "account",
-    question: "How do I create an account?",
+    question: "How do I open an account?",
     answer:
-      "Pick a passkey or connect a wallet you already use, choose a username, and you are in. There is no email requirement, no document upload, and no waiting period. Your account is created onchain and controlled by keys that stay on your device.",
+      "Choose a passkey or connect a wallet you already use, pick a username, and you are in. There is no paperwork, no document upload, and no waiting period. The account is controlled by keys that stay on your device.",
   },
   {
     id: "swaps",
-    question: "How do cross-network swaps work?",
+    question: "How do swaps across networks work?",
     answer:
-      "You state the asset you hold and the asset you want. The request is broadcast to a network of market makers who compete to fill it, and the best quote wins. Settlement across networks is handled behind the scenes, so you never bridge manually or hold a wrapped placeholder asset.",
+      "You state the asset you hold and the asset you want. The request goes out to a network of liquidity providers who compete to fill it, and the best quote wins. Settlement across networks happens behind the scenes, so you never bridge manually or hold a wrapped stand-in asset.",
   },
   {
     id: "invest",
-    question: "What can I invest in through Clearly?",
+    question: "What can I invest in?",
     answer:
-      "Major digital assets, tokenised equity and treasury exposure, gold and silver, and a set of curated yield strategies. Every position is fractional, so you can take a meaningful allocation without buying a whole unit, and everything reports into one portfolio view.",
+      "Major digital assets, tokenised equity and treasury exposure, gold and silver, and a curated set of yield strategies. Every position is fractional, so you can take a meaningful allocation without buying a whole unit, and all of it reports into one portfolio view.",
   },
   {
     id: "interest",
-    question: "How do I earn interest on my assets?",
+    question: "How is interest earned?",
     answer:
-      "Move a balance into any listed strategy and it begins accruing immediately. Rates are variable and shown as a live figure rather than a marketing headline, the underlying venue is named on every position, and withdrawals are not subject to a lock-up period.",
+      "Move a balance into any listed strategy and it starts accruing immediately. Rates are variable and shown as a live figure rather than a marketing headline, the underlying venue is named on every position, and withdrawals are not subject to a lock-up.",
   },
   {
     id: "business",
-    question: "Can my business integrate?",
+    question: "Can a business use this?",
     answer:
-      "Yes. Businesses can settle invoices, run payroll across borders, and hold treasury positions from the same account primitives, with a scoped API and signed statements for reconciliation. Confidential balances with selective disclosure work particularly well for teams that cannot publish payroll onchain.",
+      "Yes. Teams can settle invoices, run payroll across borders, and hold treasury positions on the same account primitives, with a scoped API and signed statements for reconciliation. Confidential balances with selective disclosure suit teams who cannot publish payroll to a public ledger.",
   },
   {
     id: "help",
-    question: "Need help?",
+    question: "How do I get help?",
     answer:
-      "Support is available directly from the account, and the help bubble at the corner of this page opens a contact form that reaches the same team. Most questions are answered within a few hours, and account recovery requests are prioritised.",
+      "Support is reachable from inside the account, and the help button in the corner of this page opens a form that reaches the same team. Most questions are answered within a few hours, and recovery requests are prioritised.",
   },
 ];
 

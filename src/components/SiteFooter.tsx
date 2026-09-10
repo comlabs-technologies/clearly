@@ -54,8 +54,8 @@ export function SiteFooter() {
           <div className="sm:col-span-2 lg:col-span-1">
             <BrandMark tone="dark" />
             <p className="mt-4 max-w-[38ch] text-[14px] leading-[22px] text-dark-soft">
-              One borderless account for crypto, stocks, bonds, precious metals and yield —
-              confidential by design.
+              One account for currencies, equities, metals and yield — private by
+              default, and open to inspect.
             </p>
           </div>
 

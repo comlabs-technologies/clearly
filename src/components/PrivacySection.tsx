@@ -51,14 +51,14 @@ export function PrivacySection() {
       <div className="page-rail rail-dark">
         <div className="gutter pt-section-sm md:pt-section">
           <Reveal>
-            <h2 className="max-w-[24ch] text-h2-mobile md:text-h2">
-              Keep your financial activity confidential.
+            <h2 className="text-h2-mobile md:text-h2">
+              Private by default, visible by choice.
             </h2>
           </Reveal>
           <Reveal delay={0.08}>
             <p className="mt-4 max-w-prose text-body text-dark-soft">
-              Balances and transactions stay confidential when you want them to, with control
-              over what you reveal. No separate tools, and no complicated workflow.
+              Balances and transactions stay between you and the people you choose to show
+              them to. No separate tools, and no workflow to learn.
             </p>
           </Reveal>
         </div>

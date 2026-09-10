@@ -127,19 +127,23 @@ export function PortfolioProductDemo({ baseDelay = 0 }: { baseDelay?: number }) 
     <div className="relative">
       {/* Live demo label, overlapping the top-left edge of the frame */}
       <motion.div
-        className="absolute -top-3 left-4 z-20 flex items-center gap-2 sm:left-8"
+        className="absolute -top-3.5 left-4 z-20 sm:left-8"
         initial={reduced ? false : { opacity: 0, y: 16, scale: 0.9 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.55, delay: baseDelay + 0.1, ease: EASE_PREMIUM }}
       >
-        <span className="flex items-center gap-2 rounded-full border border-hairline bg-white px-3 py-1.5 text-[12px] font-semibold text-ink shadow-none">
-          <span className="relative flex h-1.5 w-1.5">
-            <span className="absolute inline-flex h-full w-full rounded-full bg-accent" />
-          </span>
+        {/* Everything sits inside the pill so it stays legible where the label
+            overlaps the dark frame beneath it. */}
+        <span className="flex items-center gap-2 rounded-full border border-hairline bg-white py-1.5 pl-3 pr-3.5 text-[12px] font-semibold text-ink">
+          <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
           Live demo
-        </span>
-        <span className="hidden text-[12px] text-ink-soft sm:inline">
-          Try a swap for a real quote.
+          <span
+            className="hidden h-3 w-px bg-[color:var(--border-light)] sm:block"
+            aria-hidden="true"
+          />
+          <span className="hidden font-normal text-ink-soft sm:inline">
+            Explore the interface below
+          </span>
         </span>
       </motion.div>
 

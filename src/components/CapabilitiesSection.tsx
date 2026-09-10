@@ -74,14 +74,14 @@ export function CapabilitiesSection() {
       <div className="page-rail">
         <div className="gutter pb-12 pt-section-sm md:pb-16 md:pt-section">
           <Reveal>
-            <h2 className="max-w-[22ch] text-h2-mobile md:text-h2">
-              Your money always wanted to do more. Now it can.
+            <h2 className="text-h2-mobile md:text-h2">
+              Everything your money can do, in one place.
             </h2>
           </Reveal>
           <Reveal delay={0.08}>
             <p className="mt-4 max-w-prose text-body text-ink-soft">
-              Move it, trade it, invest it, and earn on it — from one account, without
-              leaving for a different app each time.
+              Move it, grow it and put it to work, without switching between a
+              different app for every task.
             </p>
           </Reveal>
         </div>

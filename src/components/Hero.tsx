@@ -34,12 +34,12 @@ export function Hero() {
 
       <div className="page-rail gutter relative">
         <div className="pt-[64px] md:pt-[96px]">
-          <h1 className="max-w-[15ch] text-hero-mobile md:text-hero-tablet lg:text-hero">
+          <h1 className="text-hero-mobile md:text-hero-tablet lg:text-hero">
             <motion.span className="block" {...line(t, "up", reduced)}>
-              Your financial life,
+              Every asset you own,
             </motion.span>
             <motion.span className="block" {...line(t + 0.09, "up", reduced)}>
-              onchain &amp; confidential.
+              in one clear account.
             </motion.span>
           </h1>
 
@@ -47,9 +47,9 @@ export function Hero() {
             className="mt-6 max-w-prose text-body text-ink-soft"
             {...line(t + 0.2, "down", reduced)}
           >
-            Crypto, stocks, bonds, precious metals, yield and more —
-            <br className="hidden sm:block" /> brought together in one borderless account,
-            confidential by design.
+            Currencies, equities, metals and yield — held together in a single
+            <br className="hidden sm:block" /> account that settles in seconds and shows
+            exactly where you stand.
           </motion.p>
 
           <motion.div
@@ -60,7 +60,7 @@ export function Hero() {
               Create account
             </a>
             <p className="text-[13px] leading-5 text-ink-soft">
-              No email. No documents. Ready in seconds.
+              No paperwork. Ready in under a minute.
             </p>
           </motion.div>
         </div>

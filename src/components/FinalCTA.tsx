@@ -14,13 +14,14 @@ export function FinalCTA() {
           }}
         >
           <Reveal distance={20} blur={0}>
-            <h2 className="max-w-[18ch] text-h2-mobile md:text-h2">
-              Your account is seconds away.
+            <h2 className="text-h2-mobile md:text-h2">
+              Start in under a minute.
             </h2>
           </Reveal>
           <Reveal delay={0.08} distance={20} blur={0}>
             <p className="mt-3 max-w-prose text-body text-ink/70">
-              No email. No documents. Pick a passkey or a wallet and you&rsquo;re in.
+              No paperwork and no waiting. Choose a passkey or connect a wallet you
+              already use.
             </p>
           </Reveal>
           <Reveal delay={0.16} distance={20} blur={0}>
